@@ -3,7 +3,7 @@
 
      <!-- Remotes -->
     <remote name="me"
-          fetch="https://github.com/Futar0"
+          fetch="https://github.com/Uzui01"
           clone-depth="1" /> 
     
     <!-- Sync trees -->
@@ -14,4 +14,4 @@
     
     <!-- HALs -->
 <project path="hardware/xiaomi" name="android_hardware_xiaomi.git" remote="me" revision="lineage-20.0" />
-     </manifest>    
+     </manifest>

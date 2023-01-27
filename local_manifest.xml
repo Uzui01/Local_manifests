@@ -2,6 +2,8 @@
 <manifest>
 <remote name="gen"
         fetch="https://github.com" />
+<remote name="me"
+        fetch="https://github.com/Uzui01" />
 
 <remote name="dev"
         fetch="https://github.com/mt6768-dev" />

@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+<remote name="gen"
+        fetch="https://github.com" />
 
-     <!-- Remotes -->
-    <remote name="me"
-          fetch="https://github.com/Uzui01"
-          clone-depth="1" /> 
-    
-    <!-- Sync trees -->
-    <project path="device/xiaomi/spes" name="android_device_xiaomi_spes.git" remote="me" revision="lineage-20.0" />
-    <project path="vendor/xiaomi/spes" name="android_vendor_xiaomi_spes.git" remote="me" revision="lineage-20.0" />
-    <project path="kernel/xiaomi/spes" name="kernel_xiaomi_spes_header.git" remote="me" revision="lineage-20.0" />
-    <project path="prebuilts/clang/host/linux-x86/clang-r416183b1" name="android_prebuilts_clang_host_linux-x86_clang-r416183b1.git" remote="me" revision="arrow-11.0" />
-    
-    <!-- HALs -->
-<project path="hardware/xiaomi" name="android_hardware_xiaomi.git" remote="me" revision="lineage-20" />
-     </manifest>
+<remote name="dev"
+        fetch="https://github.com/mt6768-dev" />
+
+<remote name="clang" 
+        fetch="https://gitlab.com/ImSurajxD" />
+        
+  <!-- Device Trees -->
+  <project path="device/xiaomi/lancelot" name="android_device_xiaomi_lancelot.git" remote="me" revision="lineage-20" clone-depth="1" />
+  <project path="device/xiaomi/mt6768-common" name="android_device_xiaomi_mt6768-common.git" remote="dev" revision="lineage-20" clone-depth="1" />
+  <project path="kernel/xiaomi/mt6768" name="android_kernel_xiaomi_mt6768.git" remote="me" revision="lineage-20" clone-depth="1" />
+  <project path="vendor/xiaomi/lancelot" name="proprietary_vendor_xiaomi_lancelot.git" remote="dev" revision="lineage-20" clone-depth="1" />
+  <project path="vendor/xiaomi/mt6768-common" name="proprietary_vendor_xiaomi_mt6768-common.git" remote="dev" revision="lineage-20" clone-depth="1" />
+  <!-- Other Stuffs -->
+  <project path="device/mediatek/sepolicy_vndr" name="android_device_mediatek_sepolicy_vndr.git" remote="dev" revision="lineage-20" clone-depth="1" />
+  <project path="hardware/mediatek" name="mt6768-dev/android_hardware_mediatek.git" remote="gen" revision="lineage-20" clone-depth="1" />
+  <project path="packages/apps/MtkFMRadio" name="android_packages_apps_MtkFMRadio.git" remote="dev" revision="lineage-20" clone-depth="1" />
+  <project path="vendor/mediatek/interfaces" name="vendor_mediatek_opensource_interfaces.git" remote="dev" revision="lineage-20" clone-depth="1" />
+  <!-- Clang -->
+  <project path="prebuilts/clang/host/linux-x86/clang-r450784d" name="clang-r450784d" remote="clang" revision="master" clone-depth="1" />
+</manifest>
